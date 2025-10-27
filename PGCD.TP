@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int a, b, r;
+  // Lire deux entiers
+    printf("Entrer deux nombres entiers : ");
+    scanf("%d %d", &a, &b);
+  // Affichage des étapes de l'algorithme
+    printf("\nÉtapes de l'algorithme d'Euclide :\n");
+ // Tant que le reste n'est pas nul
+    while (b != 0) {
+        r = a % b;
+        printf("%d = %d × %d + %d\n", a, b, a / b, r);
+        a = b;
+        b = r;
+    }
+  // Résultat final
+    printf("\nLe PGCD est : %d\n", a);
+ return 0;
+}
