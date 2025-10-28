@@ -1,0 +1,71 @@
+Définition du PGCD :
+Le PGCD de deux entiers naturels est le plus grand entier qui les divise sans laisser de reste. 
+
+Le principe d’algorithme d’Euclide :
+Écrire un algorithme permettant de calculer le PGCD de deux entiers naturels positifs a et b, en utilisant l’algorithme d’Euclide qui se base sur les divisions successives.
+
+Les exemples manuels:
+Exemple 1:
+48 = 18 × 2 + 12
+18 = 12 × 1 + 6
+12 = 6 × 2 + 0
+
+⇒ PGCD(48, 18) = 6
+Exemple 2 :
+56 = 42 × 1 + 14
+42 = 14 × 3 + 0
+
+⇒ PGCD(56, 42) = 14
+Exemple 3:
+99 = 78 × 1 + 21
+78 = 21 × 3 + 15
+21 = 15 × 1 + 6
+15 = 6  × 2 + 3
+6  = 3  × 2 + 0
+
+⇒ PGCD(99, 78) = 3
+
+L’algorithme :
+Algorithme PGCD_Etapes
+Variables :
+    a, b, r : entiers
+
+Début
+    Écrire "Entrer deux nombres entiers : "
+    Lire a, b
+
+    Écrire "Étapes de l'algorithme d'Euclide :"
+
+    Tant que b <> 0 Faire
+        r ← a mod b
+        Écrire a, " = ", b, " × ", (a / b), " + ", r
+        a ← b
+        b ← r
+    Fin Tant que
+
+    Écrire "Le PGCD est : ", a
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
